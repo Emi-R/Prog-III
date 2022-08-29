@@ -28,7 +28,7 @@ namespace Proyecto_CSharp_1
             string estado;
 
             //Carga y validacion de Apellido
- 
+
             p.apellido = tbxApellido.Text;
 
             p.nombre = tbxNombre.Text;
@@ -36,12 +36,21 @@ namespace Proyecto_CSharp_1
             //Carga y validación de DNI
             try
             {
-            p.dni = int.Parse(tbxDni.Text);
+                p.dni = int.Parse(tbxDni.Text);
             }
             catch (FormatException ex2)
             {
                 MessageBox.Show("DNI inválido. No puede contener letras. Reingrese por favor.");
                 return;
+            }
+
+            if (rbtMasc.Checked)
+            {
+                p.sexo = "Masculino";
+            }
+            else
+            {
+                p.sexo = "Femenino";
             }
 
             p.fechaNac = dtpFechaNac.Value;
@@ -65,19 +74,24 @@ namespace Proyecto_CSharp_1
             {
                 p.estadoCivil = 4;
                 estado = "Separado";
-            }   
+            }
             else
             {
                 p.estadoCivil = 5;
                 estado = "Juntado";
             }
 
-            MessageBox.Show("Apellido y nombres: " + p.apellido + ", " + p.nombre + "\n\n" + 
+            MessageBox.Show("Apellido y nombres: " + p.apellido + ", " + p.nombre + "\n\n" +
                             "DNI: " + p.dni + "\n\n" +
+                            "Sexo: " + p.sexo + "\n\n" +
                             "Fecha de Nacimiento: " + p.fechaNac.ToShortDateString() + "\n\n" +
                             "Estado civil: " + estado);
 
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

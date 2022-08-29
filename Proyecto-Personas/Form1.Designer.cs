@@ -33,11 +33,15 @@
             this.cargarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarPersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stpFechaHora = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stpFechaHora});
             this.statusStrip1.Location = new System.Drawing.Point(0, 451);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(495, 22);
@@ -68,12 +72,19 @@
             this.mostrarPersonasToolStripMenuItem.Name = "mostrarPersonasToolStripMenuItem";
             this.mostrarPersonasToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
             this.mostrarPersonasToolStripMenuItem.Text = "Mostrar Personas";
+            this.mostrarPersonasToolStripMenuItem.Click += new System.EventHandler(this.mostrarPersonasToolStripMenuItem_Click);
             // 
             // buscarPersonasToolStripMenuItem
             // 
             this.buscarPersonasToolStripMenuItem.Name = "buscarPersonasToolStripMenuItem";
             this.buscarPersonasToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.buscarPersonasToolStripMenuItem.Text = "Buscar Personas";
+            // 
+            // stpFechaHora
+            // 
+            this.stpFechaHora.Name = "stpFechaHora";
+            this.stpFechaHora.Size = new System.Drawing.Size(118, 17);
+            this.stpFechaHora.Text = "toolStripStatusLabel1";
             // 
             // Form1
             // 
@@ -85,11 +96,12 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Proyecto Personas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -104,6 +116,7 @@
         private System.Windows.Forms.ToolStripMenuItem cargarPersonaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarPersonasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarPersonasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel stpFechaHora;
     }
 }
 

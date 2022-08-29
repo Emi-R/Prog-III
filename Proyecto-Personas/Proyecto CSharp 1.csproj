@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConexionPersona.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +59,12 @@
     <Compile Include="frmCargarPersona.Designer.cs">
       <DependentUpon>frmCargarPersona.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMostrarPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMostrarPersonas.Designer.cs">
+      <DependentUpon>frmMostrarPersonas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +73,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCargarPersona.resx">
       <DependentUpon>frmCargarPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMostrarPersonas.resx">
+      <DependentUpon>frmMostrarPersonas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

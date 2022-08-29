@@ -38,5 +38,12 @@ namespace Proyecto_CSharp_1
             ventanaCargarPersona.Show();
 
         }
+
+        private void mostrarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMostrarPersonas frmMostrarPersonas = new frmMostrarPersonas();
+            frmMostrarPersonas.MdiParent = this;
+            frmMostrarPersonas.Show();
+        }
     }
 }

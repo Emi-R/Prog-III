@@ -46,14 +46,18 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.gbxSexo = new System.Windows.Forms.GroupBox();
+            this.rbtMasc = new System.Windows.Forms.RadioButton();
+            this.rbtFem = new System.Windows.Forms.RadioButton();
             this.gbxEstadoCiv.SuspendLayout();
+            this.gbxSexo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblSubtitulo
             // 
             this.lblSubtitulo.AutoSize = true;
             this.lblSubtitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtitulo.Location = new System.Drawing.Point(46, 54);
+            this.lblSubtitulo.Location = new System.Drawing.Point(54, 52);
             this.lblSubtitulo.Name = "lblSubtitulo";
             this.lblSubtitulo.Size = new System.Drawing.Size(231, 20);
             this.lblSubtitulo.TabIndex = 0;
@@ -63,7 +67,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(83, 18);
+            this.lblTitulo.Location = new System.Drawing.Point(91, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(152, 25);
             this.lblTitulo.TabIndex = 1;
@@ -72,7 +76,7 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(24, 105);
+            this.lblApellido.Location = new System.Drawing.Point(24, 132);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(47, 13);
             this.lblApellido.TabIndex = 2;
@@ -80,7 +84,7 @@
             // 
             // tbxApellido
             // 
-            this.tbxApellido.Location = new System.Drawing.Point(77, 102);
+            this.tbxApellido.Location = new System.Drawing.Point(77, 129);
             this.tbxApellido.Name = "tbxApellido";
             this.tbxApellido.Size = new System.Drawing.Size(219, 20);
             this.tbxApellido.TabIndex = 3;
@@ -88,7 +92,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(24, 142);
+            this.lblNombre.Location = new System.Drawing.Point(24, 169);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 4;
@@ -96,7 +100,7 @@
             // 
             // tbxNombre
             // 
-            this.tbxNombre.Location = new System.Drawing.Point(77, 139);
+            this.tbxNombre.Location = new System.Drawing.Point(77, 166);
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(219, 20);
             this.tbxNombre.TabIndex = 5;
@@ -104,7 +108,7 @@
             // lblDni
             // 
             this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(33, 179);
+            this.lblDni.Location = new System.Drawing.Point(33, 95);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(29, 13);
             this.lblDni.TabIndex = 6;
@@ -112,7 +116,7 @@
             // 
             // tbxDni
             // 
-            this.tbxDni.Location = new System.Drawing.Point(77, 176);
+            this.tbxDni.Location = new System.Drawing.Point(77, 92);
             this.tbxDni.Name = "tbxDni";
             this.tbxDni.Size = new System.Drawing.Size(133, 20);
             this.tbxDni.TabIndex = 7;
@@ -120,7 +124,7 @@
             // lblFechaNac
             // 
             this.lblFechaNac.AutoSize = true;
-            this.lblFechaNac.Location = new System.Drawing.Point(99, 214);
+            this.lblFechaNac.Location = new System.Drawing.Point(85, 279);
             this.lblFechaNac.Name = "lblFechaNac";
             this.lblFechaNac.Size = new System.Drawing.Size(159, 13);
             this.lblFechaNac.TabIndex = 8;
@@ -133,7 +137,7 @@
             this.gbxEstadoCiv.Controls.Add(this.rbtDivorciado);
             this.gbxEstadoCiv.Controls.Add(this.rbtCasado);
             this.gbxEstadoCiv.Controls.Add(this.rbtSoltero);
-            this.gbxEstadoCiv.Location = new System.Drawing.Point(27, 279);
+            this.gbxEstadoCiv.Location = new System.Drawing.Point(27, 340);
             this.gbxEstadoCiv.Name = "gbxEstadoCiv";
             this.gbxEstadoCiv.Size = new System.Drawing.Size(282, 142);
             this.gbxEstadoCiv.TabIndex = 10;
@@ -143,7 +147,7 @@
             // rbtJuntado
             // 
             this.rbtJuntado.AutoSize = true;
-            this.rbtJuntado.Location = new System.Drawing.Point(6, 111);
+            this.rbtJuntado.Location = new System.Drawing.Point(14, 111);
             this.rbtJuntado.Name = "rbtJuntado";
             this.rbtJuntado.Size = new System.Drawing.Size(63, 17);
             this.rbtJuntado.TabIndex = 4;
@@ -153,7 +157,7 @@
             // rbtSeparado
             // 
             this.rbtSeparado.AutoSize = true;
-            this.rbtSeparado.Location = new System.Drawing.Point(6, 88);
+            this.rbtSeparado.Location = new System.Drawing.Point(14, 88);
             this.rbtSeparado.Name = "rbtSeparado";
             this.rbtSeparado.Size = new System.Drawing.Size(71, 17);
             this.rbtSeparado.TabIndex = 3;
@@ -163,7 +167,7 @@
             // rbtDivorciado
             // 
             this.rbtDivorciado.AutoSize = true;
-            this.rbtDivorciado.Location = new System.Drawing.Point(6, 65);
+            this.rbtDivorciado.Location = new System.Drawing.Point(14, 65);
             this.rbtDivorciado.Name = "rbtDivorciado";
             this.rbtDivorciado.Size = new System.Drawing.Size(76, 17);
             this.rbtDivorciado.TabIndex = 2;
@@ -173,7 +177,7 @@
             // rbtCasado
             // 
             this.rbtCasado.AutoSize = true;
-            this.rbtCasado.Location = new System.Drawing.Point(6, 42);
+            this.rbtCasado.Location = new System.Drawing.Point(14, 42);
             this.rbtCasado.Name = "rbtCasado";
             this.rbtCasado.Size = new System.Drawing.Size(61, 17);
             this.rbtCasado.TabIndex = 1;
@@ -184,7 +188,7 @@
             // 
             this.rbtSoltero.AutoSize = true;
             this.rbtSoltero.Checked = true;
-            this.rbtSoltero.Location = new System.Drawing.Point(6, 19);
+            this.rbtSoltero.Location = new System.Drawing.Point(14, 19);
             this.rbtSoltero.Name = "rbtSoltero";
             this.rbtSoltero.Size = new System.Drawing.Size(58, 17);
             this.rbtSoltero.TabIndex = 0;
@@ -194,9 +198,9 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(27, 442);
+            this.btnGuardar.Location = new System.Drawing.Point(50, 488);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(94, 25);
+            this.btnGuardar.Size = new System.Drawing.Size(94, 40);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -204,26 +208,61 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(170, 442);
+            this.btnSalir.Location = new System.Drawing.Point(189, 488);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(126, 25);
+            this.btnSalir.Size = new System.Drawing.Size(107, 40);
             this.btnSalir.TabIndex = 12;
-            this.btnSalir.Text = "Salir sin guardar";
+            this.btnSalir.Text = "Salir \r\nSin Guardar";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // dtpFechaNac
             // 
             this.dtpFechaNac.CalendarFont = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaNac.Location = new System.Drawing.Point(77, 240);
+            this.dtpFechaNac.Location = new System.Drawing.Point(67, 300);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaNac.TabIndex = 13;
+            // 
+            // gbxSexo
+            // 
+            this.gbxSexo.Controls.Add(this.rbtFem);
+            this.gbxSexo.Controls.Add(this.rbtMasc);
+            this.gbxSexo.Location = new System.Drawing.Point(50, 207);
+            this.gbxSexo.Name = "gbxSexo";
+            this.gbxSexo.Size = new System.Drawing.Size(238, 53);
+            this.gbxSexo.TabIndex = 14;
+            this.gbxSexo.TabStop = false;
+            this.gbxSexo.Text = "Sexo";
+            // 
+            // rbtMasc
+            // 
+            this.rbtMasc.AutoSize = true;
+            this.rbtMasc.Checked = true;
+            this.rbtMasc.Location = new System.Drawing.Point(19, 19);
+            this.rbtMasc.Name = "rbtMasc";
+            this.rbtMasc.Size = new System.Drawing.Size(73, 17);
+            this.rbtMasc.TabIndex = 0;
+            this.rbtMasc.TabStop = true;
+            this.rbtMasc.Text = "Masculino";
+            this.rbtMasc.UseVisualStyleBackColor = true;
+            // 
+            // rbtFem
+            // 
+            this.rbtFem.AutoSize = true;
+            this.rbtFem.Location = new System.Drawing.Point(129, 19);
+            this.rbtFem.Name = "rbtFem";
+            this.rbtFem.Size = new System.Drawing.Size(71, 17);
+            this.rbtFem.TabIndex = 1;
+            this.rbtFem.Text = "Femenino";
+            this.rbtFem.UseVisualStyleBackColor = true;
             // 
             // frmCargarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 479);
+            this.ClientSize = new System.Drawing.Size(324, 547);
+            this.Controls.Add(this.gbxSexo);
             this.Controls.Add(this.dtpFechaNac);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGuardar);
@@ -237,12 +276,16 @@
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblSubtitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmCargarPersona";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCargarPersona";
             this.Load += new System.EventHandler(this.frmCargarPersona_Load);
             this.gbxEstadoCiv.ResumeLayout(false);
             this.gbxEstadoCiv.PerformLayout();
+            this.gbxSexo.ResumeLayout(false);
+            this.gbxSexo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,5 +311,8 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
+        private System.Windows.Forms.GroupBox gbxSexo;
+        private System.Windows.Forms.RadioButton rbtFem;
+        private System.Windows.Forms.RadioButton rbtMasc;
     }
 }
