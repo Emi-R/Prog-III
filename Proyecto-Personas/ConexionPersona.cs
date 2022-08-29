@@ -20,9 +20,9 @@ namespace Proyecto_CSharp_1
 
             try
             {
-                conexion.ConnectionString = "server=localhost; database=Personas; integrated security=true";
+                conexion.ConnectionString = "server=localhost; database=AplicacionPersonas; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select * From Personas";
+                comando.CommandText = "Select Dni, Apellido, Nombre, FechaNac, EstadoCivil, Sexo from Personas";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -31,11 +31,11 @@ namespace Proyecto_CSharp_1
                 while(reader.Read())
                 {
                     Persona persona = new Persona();
-                    persona.dni = reader.GetInt32(0);
+                    persona.dni = (string)reader["Dni"];
                     persona.apellido = (string)reader["Apellido"];
                     persona.nombre = (string)reader["Nombre"];
                     persona.fechaNac = reader.GetDateTime(3);
-                    persona.estadoCivil = reader.GetInt32(4);
+                    persona.estadoCivil = reader.GetInt16(4);
                     persona.sexo = reader.GetString(5);
 
                     lista.Add(persona);

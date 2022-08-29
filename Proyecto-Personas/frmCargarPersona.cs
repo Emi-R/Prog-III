@@ -34,15 +34,17 @@ namespace Proyecto_CSharp_1
             p.nombre = tbxNombre.Text;
 
             //Carga y validación de DNI
-            try
-            {
-                p.dni = int.Parse(tbxDni.Text);
-            }
-            catch (FormatException ex2)
-            {
-                MessageBox.Show("DNI inválido. No puede contener letras. Reingrese por favor.");
-                return;
-            }
+            //try
+            //{
+            //    p.dni = int.Parse(tbxDni.Text);
+            //}
+            //catch (FormatException ex2)
+            //{
+            //    MessageBox.Show("DNI inválido. No puede contener letras. Reingrese por favor.");
+            //    return;
+            //}
+
+            p.dni = tbxDni.Text;
 
             if (rbtMasc.Checked)
             {
