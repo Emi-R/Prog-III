@@ -59,8 +59,8 @@
             // cargarPersonaToolStripMenuItem
             // 
             this.cargarPersonaToolStripMenuItem.Name = "cargarPersonaToolStripMenuItem";
-            this.cargarPersonaToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.cargarPersonaToolStripMenuItem.Text = "Cargar Persona";
+            this.cargarPersonaToolStripMenuItem.Size = new System.Drawing.Size(136, 20);
+            this.cargarPersonaToolStripMenuItem.Text = "Cargar Nueva Persona";
             this.cargarPersonaToolStripMenuItem.Click += new System.EventHandler(this.cargarPersonaToolStripMenuItem_Click);
             // 
             // mostrarPersonasToolStripMenuItem

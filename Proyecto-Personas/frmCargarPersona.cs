@@ -25,13 +25,26 @@ namespace Proyecto_CSharp_1
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Persona p = new Persona();
-            string estado;     
+            string estado;
 
+            //Carga y validacion de Apellido
+ 
             p.apellido = tbxApellido.Text;
-            p.nombre = tbxNombre.Text;
-            p.dni = tbxDni.Text;
-            p.fechaNac = dtpFechaNac.Value;
 
+            p.nombre = tbxNombre.Text;
+
+            //Carga y validación de DNI
+            try
+            {
+            p.dni = int.Parse(tbxDni.Text);
+            }
+            catch (FormatException ex2)
+            {
+                MessageBox.Show("DNI inválido. No puede contener letras. Reingrese por favor.");
+                return;
+            }
+
+            p.fechaNac = dtpFechaNac.Value;
 
             if (rbtSoltero.Checked)
             {
