@@ -1,4 +1,4 @@
-﻿namespace Proyecto_CSharp_1
+﻿namespace winform_app
 {
     partial class frmMostrarPersonas
     {

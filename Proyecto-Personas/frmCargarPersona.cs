@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using negocio;
 
-namespace Proyecto_CSharp_1
+namespace negocio
 {
     public partial class frmCargarPersona : Form
     {
@@ -48,11 +50,13 @@ namespace Proyecto_CSharp_1
 
             if (rbtMasc.Checked)
             {
-                p.sexo = "Masculino";
+                p.sexo = false;
+                string sexo = "Masculino";
             }
             else
             {
-                p.sexo = "Femenino";
+                p.sexo = true;
+                string sexo = "Femenino";
             }
 
             p.fechaNac = dtpFechaNac.Value;

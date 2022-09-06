@@ -1,4 +1,4 @@
-﻿namespace Proyecto_CSharp_1
+﻿namespace winform_app
 {
     partial class Form1
     {
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.stpFechaHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cargarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarPersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stpFechaHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +47,12 @@
             this.statusStrip1.Size = new System.Drawing.Size(495, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // stpFechaHora
+            // 
+            this.stpFechaHora.Name = "stpFechaHora";
+            this.stpFechaHora.Size = new System.Drawing.Size(118, 17);
+            this.stpFechaHora.Text = "toolStripStatusLabel1";
             // 
             // menuStrip1
             // 
@@ -79,12 +85,6 @@
             this.buscarPersonasToolStripMenuItem.Name = "buscarPersonasToolStripMenuItem";
             this.buscarPersonasToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.buscarPersonasToolStripMenuItem.Text = "Buscar Personas";
-            // 
-            // stpFechaHora
-            // 
-            this.stpFechaHora.Name = "stpFechaHora";
-            this.stpFechaHora.Size = new System.Drawing.Size(118, 17);
-            this.stpFechaHora.Text = "toolStripStatusLabel1";
             // 
             // Form1
             // 

@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using negocio;
 
-namespace Proyecto_CSharp_1
+namespace winform_app
 {
     public partial class Form1 : Form
     {
@@ -40,6 +41,13 @@ namespace Proyecto_CSharp_1
         }
 
         private void mostrarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMostrarPersonas frmMostrarPersonas = new frmMostrarPersonas();
+            frmMostrarPersonas.MdiParent = this;
+            frmMostrarPersonas.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmMostrarPersonas frmMostrarPersonas = new frmMostrarPersonas();
             frmMostrarPersonas.MdiParent = this;

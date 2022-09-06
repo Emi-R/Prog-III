@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using negocio;
 
-namespace Proyecto_CSharp_1
+namespace winform_app
 {
     public partial class frmMostrarPersonas : Form
     {

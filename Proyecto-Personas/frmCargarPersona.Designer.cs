@@ -1,4 +1,4 @@
-﻿namespace Proyecto_CSharp_1
+﻿namespace negocio
 {
     partial class frmCargarPersona
     {
