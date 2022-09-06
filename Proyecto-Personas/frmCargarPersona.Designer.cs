@@ -47,8 +47,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.gbxSexo = new System.Windows.Forms.GroupBox();
-            this.rbtMasc = new System.Windows.Forms.RadioButton();
             this.rbtFem = new System.Windows.Forms.RadioButton();
+            this.rbtMasc = new System.Windows.Forms.RadioButton();
             this.gbxEstadoCiv.SuspendLayout();
             this.gbxSexo.SuspendLayout();
             this.SuspendLayout();
@@ -100,6 +100,7 @@
             // 
             // tbxNombre
             // 
+            this.tbxNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbxNombre.Location = new System.Drawing.Point(77, 166);
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(219, 20);
@@ -235,6 +236,16 @@
             this.gbxSexo.TabStop = false;
             this.gbxSexo.Text = "Sexo";
             // 
+            // rbtFem
+            // 
+            this.rbtFem.AutoSize = true;
+            this.rbtFem.Location = new System.Drawing.Point(129, 19);
+            this.rbtFem.Name = "rbtFem";
+            this.rbtFem.Size = new System.Drawing.Size(71, 17);
+            this.rbtFem.TabIndex = 1;
+            this.rbtFem.Text = "Femenino";
+            this.rbtFem.UseVisualStyleBackColor = true;
+            // 
             // rbtMasc
             // 
             this.rbtMasc.AutoSize = true;
@@ -247,20 +258,12 @@
             this.rbtMasc.Text = "Masculino";
             this.rbtMasc.UseVisualStyleBackColor = true;
             // 
-            // rbtFem
-            // 
-            this.rbtFem.AutoSize = true;
-            this.rbtFem.Location = new System.Drawing.Point(129, 19);
-            this.rbtFem.Name = "rbtFem";
-            this.rbtFem.Size = new System.Drawing.Size(71, 17);
-            this.rbtFem.TabIndex = 1;
-            this.rbtFem.Text = "Femenino";
-            this.rbtFem.UseVisualStyleBackColor = true;
-            // 
             // frmCargarPersona
             // 
+            this.AcceptButton = this.btnGuardar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(324, 547);
             this.Controls.Add(this.gbxSexo);
             this.Controls.Add(this.dtpFechaNac);
@@ -278,6 +281,7 @@
             this.Controls.Add(this.lblSubtitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCargarPersona";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCargarPersona";
