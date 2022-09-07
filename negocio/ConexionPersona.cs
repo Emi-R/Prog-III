@@ -20,19 +20,21 @@ namespace negocio
 
             try
             {
-                datos.setearQuery("Select Dni, Apellido, Nombres, FechaNac, EstadoCivil, Sexo From Personas");
+                datos.setearQuery("Select P.Dni, P.Apellido, P.Nombres, P.FechaNac, P.EstadoCivil, E.Estado, P.Sexo From Personas P, EstadoCivil_X_ID E Where P.EstadoCivil = E.ID");
                 datos.ejecutarLectura();
 
-                while(datos.Lector.Read())
+                while (datos.Lector.Read())
                 {
                     Persona persona = new Persona();
 
-                    persona.dni = (string)datos.Lector["Dni"];
-                    persona.apellido = (string)datos.Lector["Apellido"];
-                    persona.nombre = (string)datos.Lector["Nombres"];
-                    persona.fechaNac = datos.Lector.GetDateTime(3);
-                    persona.estadoCivil = datos.Lector.GetByte(4);
-                    persona.sexo = datos.Lector.GetBoolean(5);
+                    persona.Dni = (string)datos.Lector["Dni"];
+                    persona.Apellido = (string)datos.Lector["Apellido"];
+                    persona.Nombre = (string)datos.Lector["Nombres"];
+                    persona.FechaNac = datos.Lector.GetDateTime(3);
+                    persona.EstadoCivil = datos.Lector.GetByte(4);
+                    persona.Estado = datos.Lector.GetString(5);
+                    persona.Sexo = (string)datos.Lector["Sexo"];
+
 
                     lista.Add(persona);
 
@@ -51,20 +53,38 @@ namespace negocio
             }
 
         }
-        
+
         public void agregar(Persona nueva)
         {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+                datos.setearQuery("Insert into Personas Values ('" + nueva.Dni + "', '" +nueva.Apellido + "' , '" + nueva.Nombre + "' ,'" + nueva.FechaNac.ToShortDateString() + "'," + nueva.EstadoCivil + ", '" + nueva.Sexo + "')");
+
+                datos.ejecutarNonQuery();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
 
         }
 
-        public void modificar (Persona modificar)
+        public void modificar(Persona modificar)
         {
 
         }
-        
 
 
-        
+
+
 
     }
 }

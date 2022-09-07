@@ -22,6 +22,12 @@ namespace winform_app
         {
             ConexionPersona conexion = new ConexionPersona();
             dgvPersonas.DataSource = conexion.listar();
+            dgvPersonas.Columns["estadoCivil"].Visible = false;
+        }
+
+        private void dgvPersonas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

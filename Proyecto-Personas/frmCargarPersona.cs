@@ -27,71 +27,76 @@ namespace negocio
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Persona p = new Persona();
-            string estado;
+            ConexionPersona negocio = new ConexionPersona();
+
+            String estado;
+            String sexo;
 
             //Carga y validacion de Apellido
 
-            p.apellido = tbxApellido.Text;
+            try
+            {
+            p.Apellido = tbxApellido.Text;
 
-            p.nombre = tbxNombre.Text;
+            p.Nombre = tbxNombre.Text;
 
-            //Carga y validación de DNI
-            //try
-            //{
-            //    p.dni = int.Parse(tbxDni.Text);
-            //}
-            //catch (FormatException ex2)
-            //{
-            //    MessageBox.Show("DNI inválido. No puede contener letras. Reingrese por favor.");
-            //    return;
-            //}
-
-            p.dni = tbxDni.Text;
+            p.Dni = tbxDni.Text;
 
             if (rbtMasc.Checked)
             {
-                p.sexo = false;
-                string sexo = "Masculino";
+                p.Sexo = "M";
+                sexo = "Masculino";
             }
             else
             {
-                p.sexo = true;
-                string sexo = "Femenino";
+                p.Sexo = "F";
+                sexo = "Femenino";
             }
 
-            p.fechaNac = dtpFechaNac.Value;
+            p.FechaNac = dtpFechaNac.Value;
 
             if (rbtSoltero.Checked)
             {
-                p.estadoCivil = 1;
+                p.EstadoCivil = 1;
                 estado = "Soltero";
             }
             else if (rbtCasado.Checked)
             {
-                p.estadoCivil = 2;
+                p.EstadoCivil = 2;
                 estado = "Casado";
             }
             else if (rbtDivorciado.Checked)
             {
-                p.estadoCivil = 3;
+                p.EstadoCivil = 3;
                 estado = "Divorciado";
             }
             else if (rbtSeparado.Checked)
             {
-                p.estadoCivil = 4;
+                p.EstadoCivil = 4;
                 estado = "Separado";
             }
             else
             {
-                p.estadoCivil = 5;
+                p.EstadoCivil = 5;
                 estado = "Juntado";
             }
 
-            MessageBox.Show("Apellido y nombres: " + p.apellido + ", " + p.nombre + "\n\n" +
-                            "DNI: " + p.dni + "\n\n" +
-                            "Sexo: " + p.sexo + "\n\n" +
-                            "Fecha de Nacimiento: " + p.fechaNac.ToShortDateString() + "\n\n" +
+
+            negocio.agregar(p);
+
+            MessageBox.Show("Persona agregada correctamente. \n\nApellido y nombres: " + p.Apellido + ", " + p.Nombre + "\n" +
+                            "DNI: " + p.Dni + "\n" +
+                            "Sexo: " + sexo + "\n" +
+                            "Fecha de Nacimiento: " + p.FechaNac.ToShortDateString() + "\n" +
                             "Estado civil: " + estado);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
 
         }
 
