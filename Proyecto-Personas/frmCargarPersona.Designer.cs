@@ -87,7 +87,7 @@
             this.tbxApellido.Location = new System.Drawing.Point(77, 129);
             this.tbxApellido.Name = "tbxApellido";
             this.tbxApellido.Size = new System.Drawing.Size(219, 20);
-            this.tbxApellido.TabIndex = 3;
+            this.tbxApellido.TabIndex = 1;
             // 
             // lblNombre
             // 
@@ -104,7 +104,7 @@
             this.tbxNombre.Location = new System.Drawing.Point(77, 166);
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(219, 20);
-            this.tbxNombre.TabIndex = 5;
+            this.tbxNombre.TabIndex = 2;
             // 
             // lblDni
             // 
@@ -120,7 +120,7 @@
             this.tbxDni.Location = new System.Drawing.Point(77, 92);
             this.tbxDni.Name = "tbxDni";
             this.tbxDni.Size = new System.Drawing.Size(133, 20);
-            this.tbxDni.TabIndex = 7;
+            this.tbxDni.TabIndex = 0;
             // 
             // lblFechaNac
             // 
@@ -141,7 +141,7 @@
             this.gbxEstadoCiv.Location = new System.Drawing.Point(27, 340);
             this.gbxEstadoCiv.Name = "gbxEstadoCiv";
             this.gbxEstadoCiv.Size = new System.Drawing.Size(282, 142);
-            this.gbxEstadoCiv.TabIndex = 10;
+            this.gbxEstadoCiv.TabIndex = 5;
             this.gbxEstadoCiv.TabStop = false;
             this.gbxEstadoCiv.Text = "Estado Civil";
             // 
@@ -202,17 +202,18 @@
             this.btnGuardar.Location = new System.Drawing.Point(50, 488);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(94, 40);
-            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnSalir
             // 
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSalir.Location = new System.Drawing.Point(189, 488);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(107, 40);
-            this.btnSalir.TabIndex = 12;
+            this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir \r\nSin Guardar";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -223,7 +224,7 @@
             this.dtpFechaNac.Location = new System.Drawing.Point(67, 300);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaNac.TabIndex = 13;
+            this.dtpFechaNac.TabIndex = 4;
             // 
             // gbxSexo
             // 
@@ -232,7 +233,7 @@
             this.gbxSexo.Location = new System.Drawing.Point(50, 207);
             this.gbxSexo.Name = "gbxSexo";
             this.gbxSexo.Size = new System.Drawing.Size(238, 53);
-            this.gbxSexo.TabIndex = 14;
+            this.gbxSexo.TabIndex = 3;
             this.gbxSexo.TabStop = false;
             this.gbxSexo.Text = "Sexo";
             // 
