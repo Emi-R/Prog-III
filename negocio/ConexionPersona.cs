@@ -60,7 +60,7 @@ namespace negocio
             try
             {
 
-                datos.setearQuery("Insert into Personas Values ('" + nueva.Dni + "', '" +nueva.Apellido + "' , '" + nueva.Nombre + "' ,'" + nueva.FechaNac.ToShortDateString() + "'," + nueva.EstadoCivil + ", '" + nueva.Sexo + "')");
+                datos.setearQuery("Insert into Personas Values (" + nueva.Dni + ", '" + nueva.Apellido + "' , '" + nueva.Nombre + "' ,'" + nueva.FechaNac.ToShortDateString() + "'," + nueva.EstadoCivil + ", '" + nueva.Sexo + "')");
 
                 datos.ejecutarNonQuery();
 
